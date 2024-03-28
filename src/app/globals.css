@@ -1,0 +1,841 @@
+:root {
+  --text-heading: #0a56f1;
+  --text-para: #36454f;
+  --bg-button: #f78319;
+  --border-gradiant: linear-gradient(
+    180deg,
+    rgb(238, 145, 23) 0%,
+    rgba(131, 58, 180, 1) 50%,
+    rgb(15, 65, 245) 100%
+  );
+  --border-gradiant-2: linear-gradient(
+    45deg,
+    rgb(238, 145, 23) 0%,
+    rgba(131, 58, 180, 1) 50%,
+    rgb(15, 65, 245) 100%
+  );
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ------------------------ Common Styles ------------------------- */
+html {
+  scroll-behavior: smooth;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--text-para);
+}
+
+.container-fluid {
+  background-image: url("./assets/images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+section {
+  padding: 4rem 0 0 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--bg-button);
+  border: none;
+  padding: 1.9% 3.7%;
+  border-radius: 1.6rem;
+  font-size: 118%;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background: #fff;
+  color: var(--bg-button);
+}
+
+/* -------------------------Hero Section Style ---------------------------- */
+.hero-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-content {
+  flex: 1;
+  flex-direction: column;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -11%;
+}
+
+.hero-image .heroImg {
+  max-width: 100%;
+  height: 45rem;
+}
+
+.hero-content h1 {
+  font-size: 6rem;
+  line-height: 87%;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  color: var(--text-heading);
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  line-height: 140%;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: var(--text-para);
+}
+
+/* ------------------------- Hero Service Section ------------------------------ */
+.service-desc {
+  margin-top: 2%;
+}
+
+.service-desc-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  color: #0a56f1;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: normal;
+  justify-content: space-around;
+  padding: 3rem;
+}
+.text-para {
+  color: #36454f;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contact-bg {
+  background-image: url("./assets/images/pngtree-blue-hexagon-abstract-medical-technology-simple-white-background-image_524086\ 1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+}
+
+.contact-section {
+  padding: 4rem 16rem;
+  text-align: center;
+}
+.contact-section h1 {
+  padding-bottom: 1.2rem;
+  color: var(--text-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+.contact-section p {
+  padding-bottom: 1.2rem;
+  color: var(--text-para);
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding-bottom: 3rem;
+  line-height: 1.8rem;
+}
+
+/* Development Service Section Cards */
+.dev-service-heading {
+  color: var(--text-heading);
+  width: 85%;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4rem;
+  margin: 3rem 0;
+  min-height: 300px;
+}
+.box-container .box-grad {
+  background-image: var(--border-gradiant);
+  border-radius: 2rem;
+  padding: 0.164rem;
+}
+
+.box-container .box {
+  border-radius: 5px;
+  text-align: center;
+  padding: 3.4rem 1rem;
+  background-color: white;
+  border-radius: 2rem;
+  height: 100%;
+}
+.box-container .box .box-img {
+  height: 4.8rem;
+}
+
+.box-container .box p {
+  padding: 1.4rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.swiper-container {
+  background-color: white;
+  padding: 12% 3%;
+  text-align: center;
+  border: 1px var(--bg-button) solid;
+  border-radius: 23px;
+  height: 200px;
+  width: 90%;
+}
+
+.swiper-container p {
+  margin-top: 12%;
+}
+
+swiper-slide {
+  margin: 0;
+}
+
+/* ------------------------ Faq Accordion Styles -------------------------- */
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.acc-container {
+  width: 100%;
+  max-width: 1025px;
+  padding: 10px;
+}
+
+.acc-box {
+  width: 100%;
+  background-color: transparent;
+  margin: 10px 0;
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
+
+.acc-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 2.4rem;
+}
+.acc-heading h2 {
+  font-style: normal;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  line-height: normal;
+  letter-spacing: 0.525px;
+}
+.acc-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.acc-text p {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.84px;
+  text-align: justify;
+}
+
+.acc-box.active .acc-arrow {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+.acc-arrow {
+  transition: all 0.2s ease-in-out;
+}
+.acc-box.active {
+  border: 1px var(--bg-button) solid;
+  border-top: none;
+}
+.acc-box.active .acc-heading h2 {
+  font-weight: 700;
+}
+
+.acc-box.active .acc-text {
+  max-height: 100vh;
+  padding: 1rem 3rem;
+  transition: all 0.4s ease-in-out;
+}
+
+/* -----------------------------  Scope Grid Section -------------------------------- */
+
+.scope-wrapper {
+  max-width: 1200px;
+}
+
+.first-grid {
+  display: grid;
+  grid-template-rows: repeat(9, 12%);
+  grid-template-columns: repeat(12, 8%);
+}
+
+.item {
+  border: 1px solid #000;
+}
+/* -------------Item 2 ----------------- */
+.item-1 {
+  grid-area: 1 / 1 / 8/ 1;
+}
+.item-2-content {
+  padding: 3rem;
+}
+.item-2-context {
+  margin-bottom: 3rem;
+}
+
+.scope-h1 {
+  color: var(--bg-button);
+  font-size: 2.3rem;
+}
+.item-2-context h2 {
+  color: var(--text-para);
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.scope-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+
+.li-img {
+  height: 3rem;
+}
+.scope-list li h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-para);
+}
+
+.item-2 {
+  grid-area: 1 / 2 / 8/ 9;
+}
+/* ----------------- Item 3 ------------------- */
+.scope-item3 {
+  padding: 8%;
+  text-align: center;
+}
+.scope-item3 p {
+  font-variant: var(--text-para);
+  font-size: 1.5rem;
+}
+
+.item-3 {
+  grid-area: 1 / 9 / 7/ 12;
+}
+
+/* ---------------- Item 4 ------------------ */
+.scope-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-4 {
+  grid-area: 1 / 12 / 1/ 12;
+}
+.item-5 {
+  grid-area: 2/ 12 / 9 / 12;
+}
+.item-6 {
+  grid-area: 7 /9 /7 /9;
+}
+.item-7 {
+  grid-area: 7 /10 /7 /10;
+}
+.item-8 {
+  grid-area: 7 /11 /7 /11;
+}
+
+.item-12 {
+  border-right: none;
+}
+
+.item-13 {
+  border-left: none;
+  border-right: none;
+}
+.item-14 {
+  border-left: none;
+}
+/* -----------------------------  Models Section -------------------------------- */
+.model-container {
+  max-width: 1200px;
+  width: 100%;
+}
+.model-container .model-img {
+  width: 100%;
+  height: 90vh;
+}
+
+.models {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 8%;
+}
+
+.model-heading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.model-heading h1 {
+  color: var(--text-heading);
+  font-weight: 800;
+  font-size: 3rem;
+  padding: 4% 0;
+}
+
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+  .hero-content h2 {
+    font-size: 1.6rem;
+  }
+  .hero-image .heroImg {
+    height: 32rem;
+  }
+  .service-desc-list {
+    font-size: 2rem;
+  }
+  .text-para {
+    font-size: 1.2rem;
+  }
+  .contact-section {
+    padding: 2rem 10rem;
+  }
+  .contact-section h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .contact-section p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+  .dev-service-heading {
+    font-size: 2.1rem;
+  }
+  .box p {
+    font-size: 1rem;
+  }
+  .box {
+    padding: 2.5rem 1rem;
+  }
+  .model-container .model-img {
+    width: 100%;
+    height: 32rem;
+  }
+  .model-heading h1 {
+    font-size: 2.5rem;
+  }
+  .item-2-content {
+    padding: 4%;
+  }
+  .item-2-context {
+    margin-bottom: 3%;
+  }
+  .scope-icon-image {
+    height: 40%;
+  }
+  .li-img {
+    height: 2.7rem;
+  }
+  .scope-item3 p {
+    font-size: 1.1rem;
+  }
+  .scope-list li h2 {
+    font-size: 1.5rem;
+  }
+  .scope-list li {
+    gap: 0.9rem;
+    margin-bottom: 40px;
+  }
+  .scope-h1 {
+    font-size: 2rem;
+  }
+  .item-2-context h2 {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+  }
+  .first-grid {
+    grid-template-rows: repeat(9, 12%);
+    grid-template-columns: repeat(12, 8%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10%;
+  }
+  .hero-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8%;
+  }
+  .hero-image .heroImg {
+    height: 98%;
+  }
+  .hero-content .btn {
+    font-size: 66%;
+  }
+  .service-desc-list {
+    font-size: 1.2rem;
+  }
+  .text-para {
+    font-size: 0.8rem;
+  }
+  .contact-section {
+    padding: 1.5rem 4rem;
+  }
+  .contact-section h1 {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+  }
+  .contact-section p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    padding-bottom: 1.3rem;
+  }
+  .contact-section .btn {
+    font-size: 0.7rem;
+  }
+  .dev-service-heading {
+    font-size: 1.37rem;
+  }
+  .box-container .box .box-img {
+    height: 3rem;
+  }
+  .box-container .box p {
+    font-size: 1rem;
+  }
+  swiper-slide .box-img {
+    height: 3.4rem;
+  }
+  swiper-slide .box {
+    padding: 0;
+  }
+  .swiper-container {
+    height: 15rem;
+    padding: 2rem;
+  }
+
+  .acc-text p {
+    font-size: 0.9rem;
+  }
+  .acc-heading h2 {
+    font-size: 1.2rem;
+  }
+  .model-container .model-img {
+    width: 100%;
+    height: 22rem;
+  }
+  .model-heading h1 {
+    font-size: 2rem;
+  }
+  .item-2-content {
+    padding: 3%;
+  }
+  .item-2-context {
+    margin-bottom: 2.5%;
+  }
+  .scope-icon-image {
+    height: 30%;
+  }
+  .li-img {
+    height: 1.8rem;
+  }
+  .scope-item3 p {
+    font-size: 0.6rem;
+  }
+  .scope-list li h2 {
+    font-size: 0.9rem;
+  }
+  .scope-list li {
+    gap: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .scope-h1 {
+    font-size: 1.5rem;
+  }
+  .item-2-context h2 {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+  .first-grid {
+    grid-template-rows: repeat(9, 11%);
+  }
+}
+@media (max-width: 550px) {
+  .model-container .model-img {
+    width: 100%;
+    height: 16rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10%;
+  }
+  .hero-content h2 {
+    font-size: 0.7rem;
+    margin-bottom: 8%;
+  }
+  .hero-image .heroImg {
+    height: 98%;
+  }
+  .hero-content .btn {
+    font-size: 56%;
+  }
+  .service-desc-list {
+    font-size: 0.8rem;
+    padding: 0 2%;
+  }
+  .text-para {
+    font-size: 0.6rem;
+    padding-top: 2%;
+  }
+  .contact-section {
+    padding: 1rem 2rem;
+  }
+  .contact-section h1 {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+  .contact-section p {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+  }
+  .contact-section .btn {
+    font-size: 0.7rem;
+  }
+  .contact-section {
+    padding: 1.2rem 2rem;
+  }
+  .contact-section h1 {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+  .contact-section p {
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+    padding-bottom: 1.3rem;
+  }
+  .contact-section .btn {
+    font-size: 0.5rem;
+  }
+  .dev-service-heading {
+    font-size: 1rem;
+  }
+  swiper-slide .box-img {
+    height: 3.4rem;
+  }
+  swiper-slide .box {
+    padding: 0;
+  }
+  swiper-slide .box p {
+    font-size: 0.7em;
+  }
+  .swiper-container {
+    height: 10rem;
+    padding: 1rem;
+  }
+  .acc-text p {
+    font-size: 0.7rem;
+  }
+  .acc-heading h2 {
+    font-size: 0.9rem;
+  }
+  .acc-heading .acc-arrow {
+    height: 1.9rem;
+  }
+  .model-container .model-img {
+    width: 100%;
+    height: 13rem;
+  }
+  .model-heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .item-2-context {
+    margin-bottom: 2%;
+  }
+  .scope-icon-image {
+    height: 30%;
+  }
+  .li-img {
+    height: 1.2rem;
+  }
+  .scope-item3 p {
+    font-size: 0.5rem;
+  }
+  .scope-list li h2 {
+    font-size: 0.6rem;
+  }
+  .scope-list li {
+    gap: 0.5rem;
+    margin-bottom: 10px;
+  }
+  .scope-h1 {
+    font-size: 1rem;
+  }
+  .item-2-context h2 {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+  }
+  .first-grid {
+    grid-template-rows: repeat(9, 10%);
+  }
+}
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10%;
+  }
+  .hero-content h2 {
+    font-size: 0.5rem;
+    margin-bottom: 8%;
+  }
+  .hero-image .heroImg {
+    height: 80%;
+  }
+  .hero-content .btn {
+    font-size: 46%;
+  }
+  .service-desc-list {
+    font-size: 0.6rem;
+    padding: 0 3%;
+  }
+  .text-para {
+    font-size: 0.4rem;
+  }
+  .contact-section {
+    padding: 1.2rem 2rem;
+  }
+  .contact-section h1 {
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .contact-section p {
+    font-size: 0.5rem;
+    line-height: 0.8rem;
+    padding-bottom: 1.3rem;
+  }
+  .contact-section .btn {
+    font-size: 0.45rem;
+  }
+  .dev-service-heading {
+    font-size: 0.7rem;
+  }
+  swiper-slide .box-img {
+    height: 1rem;
+  }
+  swiper-slide .box {
+    padding: 0;
+    height: 1.9rem;
+  }
+  swiper-slide .box p {
+    font-size: 0.4em;
+  }
+  .swiper-container {
+    height: 6rem;
+    padding: 1rem 0.3rem;
+  }
+  .acc-text p {
+    font-size: 0.5rem;
+  }
+  .acc-heading h2 {
+    font-size: 0.5rem;
+  }
+  .acc-heading .acc-arrow {
+    height: 1.2rem;
+  }
+  .model-container .model-img {
+    width: 100%;
+    height: 9rem;
+  }
+  .model-heading h1 {
+    font-size: 1rem;
+  }
+  .li-img {
+    height: 1rem;
+  }
+  .scope-item3 p {
+    font-size: 0.3rem;
+  }
+  .scope-list li h2 {
+    font-size: 0.5rem;
+  }
+  .scope-list li {
+    gap: 0rem;
+    margin-bottom: 2%;
+    margin-left: -20px;
+  }
+  .scope-h1 {
+    font-size: 0.8rem;
+  }
+  .item-2-context h2 {
+    font-size: 0.6rem;
+    margin: 1rem 0;
+  }
+  .first-grid {
+    grid-template-rows: repeat(9, 9%);
+  }
+}
